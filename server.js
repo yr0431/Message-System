@@ -9,7 +9,7 @@ var app = express();
 
 var JWT_SECRET = 'ruiyang'
 
-mongoose.connect('mongodb://admin:admin@ds139989.mlab.com:39989/message_system');
+mongoose.connect('mongodb://admin:admin@ds139989.mlab.com:39989/message_system'||'mongodb://localhost/assignment5');
 var db = mongoose.connection;
 
 db.on('open', function(){
@@ -52,7 +52,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 
-app.listen(3000, function () {
+app.listen(process.env.Port, function () {
 	console.log('Listening on port 3000!')
 });
 
