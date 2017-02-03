@@ -5,7 +5,7 @@
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="recipient" name ="recipient" ng-model="recipient" required recipient-validate>
 			</div>
-			<div class="col-sm-offset-2 col-sm-10" ng-show = "form_newMst.recipient.$touched && form_newMsg.recipient.$error.recipientExist" >
+			<div class="col-sm-offset-2 col-sm-10" ng-show = "form_newMsg.recipient.$error.recipientExist" >
 				<p> User {{recipient}} does not exist! </p>
 			</div>
 		</div>
