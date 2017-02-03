@@ -71,7 +71,7 @@ app.controller('msgCtrl', function ($scope, $http, $cookies, $rootScope, $window
 	};
 	
 	$scope.showDetails = function (message) {
-		$scope.$parent.message = message;
+		$rootScope.message = message;
 		$window.location.href = '#/detail';
 	};
 
@@ -175,7 +175,7 @@ app.controller('impmsgCtrl', function($scope, $rootScope, $http){
 
 app.controller('detailCtrl', function($scope, $rootScope, $http, $window){
 	$scope.delete = function(){
-		var data = this.$parent.message;
+		var data = $rootScope.message;
 		console.log(this);
 		console.log(data);
 		$http({
