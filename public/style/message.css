@@ -1,0 +1,83 @@
+html, body{
+	height: 93%;
+}
+.full-height{
+	height: 100%;
+}
+body{
+	background: url('../images/login-background.jpg') no-repeat fixed center;
+	font-size: 15px;
+	color: #585028;
+}
+.btn{
+	overflow: hidden;
+}
+.content{
+	margin-bottom: 20px;
+}
+.message-div{
+	border: 1px solid #BBB;
+	padding: 20px;
+	border-radius: 4px;
+	background-color: rgba(255, 255, 255, 0.5);
+	height: 100%;
+}
+
+.index-outer-div{
+	border: 1px solid #BBB;
+	padding: 20px;
+	text-align: center;
+	border-radius: 4px;
+	background-color: rgba(255, 255, 255, 0.5);
+	height: 100%;
+	margin-left: -15px;
+}
+
+.index-outer-div a{
+	color: #585028;
+}
+
+.index-outer-div span{
+	margin: 5px 0;
+}
+
+
+.message-row div{
+	margin: 10px 0;
+}
+
+.message-row:hover, .index-div:hover{
+	background-color: rgba(80,80,80,0.1);
+}
+
+.hide-elem {
+	display: none;
+}
+
+.message-row div{
+	/*text-align: left;*/
+	white-space: nowrap; 
+	overflow: hidden;
+	text-overflow : ellipsis;
+}
+.message-div {
+	text-align: left;
+	overflow-y: scroll;
+
+}
+
+small.message-preview{
+	color: #a59e8a;
+	font-style: italic;
+}
+
+/*footer{
+	padding: 15px;
+	color: #777777;
+	position: relative;
+    min-height: 40px;
+	border-radius: 4px;
+	border-color: #e7e7e7;
+	margin-top: 20px;
+	background-color: #e7e7e7;
+}*/

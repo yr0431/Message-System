@@ -1,0 +1,38 @@
+body{
+	background: url('../images/login-background.jpg') no-repeat fixed center
+
+}
+
+.container{
+	margin: 0 auto;
+	background-color: rgba(255,255,255,0.5);
+	border: 1px solid #BBB;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+span{
+	margin-left: 20px;
+}
+
+.panel{
+	width: 80%;
+	margin: auto;
+}
+
+.panel-heading{
+	text-align: center;
+}
+.info-table{
+	width: 50%;
+	margin: auto;
+}
+
+.verify-div, .success-div{
+	text-align: center;
+	width: 50%;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+

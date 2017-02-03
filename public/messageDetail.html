@@ -1,0 +1,47 @@
+<div class="row">
+	<div class="col-sm-1"></div>
+	<div class="edit-div">
+		<button class="btn btn-default col-sm-2" ng-click="back()"><span class="glyphicon glyphicon-arrow-left"></span> Back</button>
+		<div class="btn-group col-sm-4" ng-show="isRecipient"> 
+			<button class="btn btn-default " ng-click="delete()">Delete</button>
+			<button class="btn btn-default" ng-click="setFlag()">Mark as {{message.important ? 'unimportan' : 'important'}}</button>
+		</div>
+
+		<a href="#/newmessage/{{message.sender}}" ng-show="isRecipient"><button class="btn btn-default">Reply</button></a>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="messageDetail-div">
+	<div class="col-sm-1"></div>
+		<div class="panel panel-default col-sm-10">
+		
+			<div class="panel-body">
+				<label class="col-sm-2" for="sender"> From : </label>
+				<div class="col-sm-6">
+					<img src="{{message.sender_img}}" height="50px">
+					<span ng-model="sender" id="sender">{{message.sender}}</span>
+				</div>
+			</div>
+			<div class="panel-body">
+				<label for="recipient" class="col-sm-2 control-label" > To : </label>
+				<div class="col-sm-10">
+					<img src="{{message.recipient_img}}" height="50px">
+					<span ng-model="recipient" id="recipient">{{message.recipient}}</span>
+				</div>
+			</div>
+			<div class="panel-body">
+				<label for="subject" class="col-sm-2 control-label" > Subject : </label>
+				<div class="col-sm-10">
+					<span ng-model="subject" id="subject">{{message.subject}}</span>
+				</div>
+			</div>
+			<div class="panel-body">
+			<label class="control-label col-sm-2" for="message"> Message: </label>
+				<div class="col-sm-10">		  
+					<div id="message" ng-model="message">{{message.message}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

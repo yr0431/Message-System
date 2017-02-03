@@ -1,0 +1,72 @@
+
+  <form class="form-horizontal" name="profileForm" ng-submit="submitUpdate()" role="profile" ng-show="editable">
+    <div class="form-group">
+      <label for="usr" class="col-sm-4 control-label">Username: </label>
+      <div class="col-sm-7">
+        <input type="text" ng-model="user.username" id="usr" class="form-control" placeholder="Username" name="username" disabled>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="psw" class="col-sm-4 control-label">New Password: </label>
+      <div class="col-sm-7">
+        <input type="password" ng-model="user.password_new" id="psw" class="form-control" placeholder="Password" name="password_new" password-validate>
+        <div class="input-help" ng-show="(profileForm.$submitted && profileForm.password_new.$invalid) || (profileForm.password_new.$touched && profileForm.password_new.$invalid)">
+          <div ng-show="profileForm.password_new.$error.pwd">
+              <p>Password must meet the following requirements:</p>
+              <ul>
+                <li ng-class="pwdHasLetter">At least <strong>one letter</strong></li>
+                <li ng-class="pwdHasNumber">At least <strong>one number</strong></li>
+                <li ng-class="pwdValidLength">Be at least <strong>8 characters</strong></li>
+              </ul>
+          </div>
+        </div>
+      </div>  
+    </div>
+    <div class="form-group">
+      <label for="psw" class="col-sm-4 control-label">Confirm Password: </label>
+      <div class="col-sm-7">
+        <input type="password" ng-model="user.password_confirm" id="psw" class="form-control" placeholder="Password" name="password_confirm" data-password-verify="user.password_new">
+        <div class="input-help" ng-show="(profileForm.$submitted && profileForm.password_confirm.$invalid) || (profileForm.password_confirm.$touched && profileForm.password_confirm.$invalid)">
+          <p ng-show="profileForm.password_confirm.$error.passwordVerify">Password doesn't match<p>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="fn" class="col-sm-4 control-label">First Name: </label>
+      <div class="col-sm-7">
+        <input type="text" id="fn" ng-model="user.firstname" class="form-control" placeholder="First Name" name="firstname" disabled>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="ln" class="col-sm-4 control-label">Last Name: </label>
+      <div class="col-sm-7">
+        <input type="text" id="ln" ng-model="user.lastname" class="form-control" placeholder="Last Name" name="lastname" disabled>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email" class="col-sm-4 control-label">Email: </label>
+      <div class="col-sm-7">
+        <input type="email" id="email" ng-model="user.email" class="form-control" placeholder="Email" name="email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="phone" class="col-sm-4 control-label">Phone: </label>
+      <div class="col-sm-7">
+        <input type="tel" id="phone" ng-model="user.phone" class="form-control" placeholder="Phone Number" name="phone">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="loc" class="col-sm-4 control-label">Location: </label>
+      <div class="col-sm-7">
+        <input type="text" id="loc" ng-model="user.location" class="form-control" placeholder="Location" name="location">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="avatar" class="col-sm-4 control-label">Avatar: </label>
+      <div class="col-sm-7">
+        <input type="text" id="avatar" ng-model="user.avatar_url" class="form-control" placeholder="Avatar Url" name="avatar">
+      </div>
+    </div>
+    <input type="submit" class="btn btn-success col-sm-offset-5" name="submit-update" value="Submit">
+    <input type="button" class="btn btn-default" ng-click="resetUpdate()" name="reset-update" value="Reset">
+  </form>

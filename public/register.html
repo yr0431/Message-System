@@ -1,0 +1,51 @@
+<div class="register-div form-group">
+	<form class="register-form" role="register" name="registerForm">
+		<div class="form-group">
+			<label for="usr">Username</label>
+			<input type="text" ng-model="register_username" id="usr" class="form-control" placeholder="Username" name="register-username" required>
+		</div>
+		<div class="form-group">
+			<label for="psw">Create a Password</label>
+			<input type="password" ng-model="register_password" id="psw" class="form-control" placeholder="Password" name="register_password" password-validate required>
+			<div class="input-help" ng-show="(registerForm.$submitted && registerForm.register_password.$invalid) || (registerForm.register_password.$touched && registerForm.register_password.$invalid)">
+	            <div ng-show="registerForm.register_password.$error.pwd">
+	                <p>Password must meet the following requirements:</p>
+	                <ul>
+	                  <li ng-class="pwdHasLetter">At least <strong>one letter</strong></li>
+	                  <li ng-class="pwdHasNumber">At least <strong>one number</strong></li>
+	                  <li ng-class="pwdValidLength">Be at least <strong>8 characters</strong></li>
+	                </ul>
+	            </div>
+       		</div>
+		</div>
+		<div class="form-group">
+			<label for="psw">Confirm your Password</label>
+			<input type="password" ng-model="register_password_confirm" id="psw" class="form-control" placeholder="Password" name="register_password_confirm" required data-password-verify="register_password">
+			<div class="input-help" ng-show="(registerForm.$submitted && registerForm.register_password_confirm.$invalid) || (registerForm.register_password_confirm.$touched && registerForm.register_password_confirm.$invalid)">
+				<p ng-show="registerForm.register_password_confirm.$error.passwordVerify">Password doesn't match<p>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="fn">First Name</label>
+			<input type="text" id="fn" ng-model="register_firstname" class="form-control" placeholder="First Name" name="register-firstname" required>
+		</div>
+		<div class="form-group">
+			<label for="ln">Last Name</label>
+			<input type="text" id="ln" ng-model="register_lastname" class="form-control" placeholder="Last Name" name="register-lastname" required>
+		</div>
+		<div class="form-group">
+			<label for="email">Email</label>
+			<input type="email" id="email" ng-model="register_email" class="form-control" placeholder="Email" name="register-email" required>
+		</div>
+		<div class="form-group">
+			<label for="phone">Phone</label>
+			<input type="tel" id="phone" ng-model="register_phone" class="form-control" placeholder="Phone Number" name="register-phone" required>
+		</div>
+		<div class="form-group">
+			<label for="loc">Location</label>
+			<input type="text" id="loc" ng-model="register_location" class="form-control" placeholder="Location" name="register-location" required>
+		</div>
+		<input type="submit" ng-submit="submitRegisInfo()" class="btn btn-primary" name="submit-register" value="Sign up">
+		<input type="button" class="btn btn-default" ng-click="resetRegisInfo()" name="reset-register" value="Reset">
+	</form>
+</div>

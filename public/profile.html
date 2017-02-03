@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+  <link rel="icon" href="/favicon.ico" />
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="style/profile.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+	<script type="text/javascript" src="script/profile.js"></script>
+	<script src="https://code.angularjs.org/1.5.5/angular-route.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.5.5/angular-cookies.js" ></script>
+</head>
+<body ng-app="profileApp" ng-controller = 'profileCtrl'>
+<header>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="login.html">MessageSystem</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="login.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="message.html#/">Message</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li ng-show="currentUser" class="hide-elem"><a href="#"><span class=""></span>Hi {{ currentUser }}! </a></li>
+      <li ng-show="currentUser" class="hide-elem"><a href="profile.html"><span class="glyphicon glyphicon-envelope"></span> My Account</a></li>
+      <li ng-show="currentUser" class="hide-elem"><a href="" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      <li ng-hide="currentUser"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+</header>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading" >
+        <img src="{{user.avatar_url}}" class="avatar" height="50px">
+        <span> Hello, {{currentUser}}. Welcome to your profile page! </span>
+        <span class="btn btn-default" ng-click="update()" ng-hide="updateclicked">Update Profile</span> 
+        <a href="/profile.html#/"><span class="btn btn-default" ng-click="updateclicked = !updateclicked" ng-show="updateclicked">Cancel Update</span></a>
+    </div>
+    <br>
+    <div class="panel-body" ng-view></div>
+  </div>
+</div>
+</body>
+</html>

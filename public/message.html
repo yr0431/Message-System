@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Messages</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="style/message.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+	<script type="text/javascript" src="script/message.js"></script>
+	<script src="https://code.angularjs.org/1.5.5/angular-route.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.5.5/angular-cookies.js" ></script>
+	<!-- <base href="/message.html"> -->
+</head>
+<body ng-app="msgApp" ng-controller = 'msgCtrl'>
+<header>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="login.html">MessageSystem</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="login.html">Home</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="message.html#/">Message</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li ng-show="currentUser" class="hide-elem"><a href="#"><span class=""></span>Hi {{ currentUser }}! </a></li>
+      <li ng-show="currentUser" class="hide-elem"><a href="profile.html"><span class="glyphicon glyphicon-envelope"></span> My Account</a></li>
+      <li ng-show="currentUser" class="hide-elem"><a href="" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      <li ng-hide="currentUser"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+</header>
+	<div class="container-fluid full-height content">
+		<div class="row full-height">
+			<div class="col-sm-2 full-height ">
+				<div class="index-outer-div">
+					<a href="#/newmessage" ><span class="btn btn-default">Compose</span></a>
+					<a href="#/"><div class="index-div"><span class="btn">Inbox</span></div></a>
+					<a href="#/impmessage"><div class="index-div"><span class="btn">Important</span></div></a>
+					<a href="#/sentmessage"><div class="index-div"><span class="btn">Sent</span></div></a>
+				</div>
+			</div>
+			<div class="col-sm-10 full-height">
+				<div class="row message-div" ng-view></div>			
+			</div>
+		</div>
+	</div>
+<!-- <footer class="container-fluid text-center">
+Made by R.Yang
+</footer> -->
+</body>
+</html>

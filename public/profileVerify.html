@@ -1,0 +1,16 @@
+<div class="verify-div form-group ">
+	<form class="verify-form" role="verify" ng-submit="submitCurrentPsw()" name="verifyForm" >
+	<div class="form-group">
+		<label for="usr">Username</label>
+		<input type="text" ng-model="currentUser" id="usr" class="form-control" placeholder="Username" name="username" disabled>
+	</div>
+	<div class="form-group">
+		<label for="psw">Current Password</label>
+		<input type="password" ng-model="verify_password" id="psw" class="form-control" placeholder="Password" name="password" required>
+	</div>
+	<div class="alert alert-warning" ng-show="invalidPassword">
+		Invalid password.
+	</div>
+	<input type="submit" class="btn btn-success" name="submit-verify" value="submit">
+	</form>
+</div>

@@ -1,0 +1,41 @@
+body{
+	background: url('../images/login-background.jpg') no-repeat fixed center
+
+}
+
+.row{
+	margin: 100px;
+}
+.container{
+	margin-top: 40px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.login-div, .register-div , .notice-div{
+	background-color: #fff;
+	border: 1px solid #BBB;
+	padding: 20px;
+	border-radius: 8px;
+}
+
+.hide-elem{
+	display: none;
+}
+
+/*input.ng-touched.ng-invalid-required {
+	border-color: red;
+	box-shadow: 0 0 3px red;
+}
+input.ng-dirty.ng-invalid {
+ 	border-color: red;
+	box-shadow: 0 0 3px red;
+}
+input.ng-untouched.ng-invalid {
+	border-color: #ccc;	
+}
+.ng-submitted input.ng-invalid{
+ 	border-color: red;
+	box-shadow: 0 0 3px red;
+}
+*/

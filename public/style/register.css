@@ -1,0 +1,21 @@
+body{
+	background: url('../images/login-background.jpg') no-repeat fixed center
+
+	/*opacity : 0.2;*/
+}
+
+.row{
+	margin: 100px;
+}
+.container{
+	margin-top: 40px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.register-div{
+	background-color: #fff;
+	border: 1px solid #BBB;
+	padding: 20px;
+	border-radius: 8px;
+}

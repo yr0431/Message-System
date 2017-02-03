@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="style/login.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.angularjs.org/1.5.5/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.5.5/angular-route.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="script/login.js"></script>
+	<script type="text/javascript" src="https://code.angularjs.org/1.5.5/angular-cookies.js" ></script>
+	<base href="/">
+</head>
+<body ng-app="loginApp" ng-controller="loginCtrl">
+<header>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">MessageSystem</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>
+      <li><a href="/profile.html">Profile</a></li>
+      <li><a href="/message.html#/">Message</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li ng-show="currentUser" class="hide-elem"><a href="#"><span class=""></span>Hi {{ currentUser }}! </a></li>
+      <li ng-show="currentUser" class="hide-elem"><a href="/profile.html"><span class="glyphicon glyphicon-envelope"></span> My Account</a></li>
+      <li ng-show="currentUser" class="hide-elem"><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      <li ng-hide="currentUser"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+</header>
+	<div class="row">
+		<div class="container">
+			<div class="login-div form-group col-sm-4">
+				<form class="login-form" role="login" ng-submit="submitLoginInfo()" name="loginForm" >
+				<div class="form-group">
+					<label for="usr">Username</label>
+					<input type="text" ng-model="login_username" id="usr" class="form-control" placeholder="Username" name="username" required>
+				</div>
+				<div class="form-group">
+					<label for="psw">Password</label>
+					<input type="password" ng-model="login_password" id="psw" class="form-control" placeholder="Password" name="password" required>
+				</div>
+				<div class="checkbox">
+	     			 <label><input type="checkbox"> Remember me</label>
+	    		</div>
+				<div class="alert alert-warning" ng-show="invalidUser">
+					Invalid username or password.<a href="/register" class="btn-link" role="button"> Sign up</a>
+				</div>
+				<input type="submit" class="btn btn-success" name="submit-login" value="Sign in">
+				<a href="/register"><input type="button" class="btn btn-link" name="create_new_acct" value="Create new account"></a>
+
+			</form>
+			</div>
+			<div class="col-sm-1"> </div>
+			<div class="col-sm-6" ng-view >
+			
+			</div>
+		</div>
+	</div>
+</body>
+</html>
