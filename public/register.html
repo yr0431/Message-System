@@ -1,5 +1,5 @@
 <div class="register-div form-group">
-	<form class="register-form" role="register" name="registerForm">
+	<form class="register-form" role="register" name="registerForm" ng-submit="submitRegisInfo()" >
 		<div class="form-group">
 			<label for="usr">Username</label>
 			<input type="text" ng-model="register_username" id="usr" class="form-control" placeholder="Username" name="register-username" required>
@@ -45,7 +45,7 @@
 			<label for="loc">Location</label>
 			<input type="text" id="loc" ng-model="register_location" class="form-control" placeholder="Location" name="register-location" required>
 		</div>
-		<input type="submit" ng-submit="submitRegisInfo()" class="btn btn-primary" name="submit-register" value="Sign up">
+		<input type="submit" class="btn btn-primary" name="submit-register" value="Sign up">
 		<input type="button" class="btn btn-default" ng-click="resetRegisInfo()" name="reset-register" value="Reset">
 	</form>
 </div>
