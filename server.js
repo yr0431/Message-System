@@ -52,8 +52,8 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 
-app.listen(process.env.Port, function () {
-	console.log('Listening on port'+process.env.Port+'!');
+app.listen(process.env.PORT || 3000, function () {
+	console.log('Listening on port!');
 });
 
 app.get('/', function(req,res){
