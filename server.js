@@ -52,7 +52,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 
-app.listen(process.env.Port, function () {
+app.listen(process.env.Port || 3000, function () {
 	console.log('Listening on port 3000!')
 });
 
