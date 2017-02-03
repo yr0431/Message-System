@@ -29,7 +29,7 @@
   
 ## issues for now
 * Login & Sign up page
-  * validation issues(data scheme used at server side, bad data won't infect the database)
+  * validation issues(data schema used at server side, bad data won't infect the database)
     * "remenber me" not available yet
     * username depulication validation not available yet
     * phone number validation not abailable yet
