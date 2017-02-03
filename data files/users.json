@@ -1,0 +1,117 @@
+[{
+    "username" : "user1",
+    "password" : "123456",
+    "firstname" : "User1",
+    "lastname" : "LN",
+    "email" : "user1@email.com",
+    "phone" : "1111111111",
+    "location" : "loc-user1",
+    "avatar_url" : "/images/default-user.png"
+},{
+    "username" : "admin",
+    "password" : "admin",
+    "firstname" : "admin",
+    "lastname" : "admin",
+    "email" : "admin@admin.com",
+    "phone" : "1234567890",
+    "location" : "NJ",
+    "avatar_url" : "/images/default-user.png"
+},{
+    "username" : "user2",
+    "password" : "123456",
+    "firstname" : "user2",
+    "lastname" : "LN",
+    "email" : "user2@email.com",
+    "phone" : "2222222222",
+    "location" : "NJ",
+    "avatar_url" : "/images/default-user.png"
+},{
+  "username": "lmartinez0",
+  "password": "7Ra1gilr",
+  "firstname": "Lawrence",
+  "lastname": "Martinez",
+  "email": "lmartinez0@biblegateway.com",
+  "phone": "5154587228",
+  "location": "9797 School Lane",
+  "avatar_url": "https://robohash.org/eanequeculpa.bmp?size=50x50&set=set1"
+}, {
+  "username": "nmorgan1",
+  "password": "FDtnpb9JESSp",
+  "firstname": "Nancy",
+  "lastname": "Morgan",
+  "email": "nmorgan1@drupal.org",
+  "phone": "5510203337",
+  "location": "835 Barby Park",
+  "avatar_url": "https://robohash.org/blanditiisexcepturilaudantium.jpg?size=50x50&set=set1"
+}, {
+  "username": "rrice2",
+  "password": "HnDBz0WCoX4",
+  "firstname": "Roger",
+  "lastname": "Rice",
+  "email": "rrice2@amazon.de",
+  "phone": "1008623966",
+  "location": "54214 Green Ridge Alley",
+  "avatar_url": "https://robohash.org/sitveroomnis.bmp?size=50x50&set=set1"
+}, {
+  "username": "jellis3",
+  "password": "MQKD9BOUUE",
+  "firstname": "Jeremy",
+  "lastname": "Ellis",
+  "email": "jellis3@hibu.com",
+  "phone": "5610363896",
+  "location": "38697 Crest Line Junction",
+  "avatar_url": "https://robohash.org/ameteosad.jpg?size=50x50&set=set1"
+}, {
+  "username": "jray4",
+  "password": "72xKU69h",
+  "firstname": "Joseph",
+  "lastname": "Ray",
+  "email": "jray4@nba.com",
+  "phone": "0703797412",
+  "location": "44 Lighthouse Bay Way",
+  "avatar_url": "https://robohash.org/quiestporro.bmp?size=50x50&set=set1"
+}, {
+  "username": "mmarshall5",
+  "password": "96yLoTyAJNH",
+  "firstname": "Martha",
+  "lastname": "Marshall",
+  "email": "mmarshall5@businessweek.com",
+  "phone": "7690544608",
+  "location": "0 Bunting Drive",
+  "avatar_url": "https://robohash.org/eligendidelenitineque.jpg?size=50x50&set=set1"
+}, {
+  "username": "abaker6",
+  "password": "qHZq5Okd2",
+  "firstname": "Andrea",
+  "lastname": "Baker",
+  "email": "abaker6@macromedia.com",
+  "phone": "9623519805",
+  "location": "548 Spenser Point"
+}, {
+  "username": "hreid7",
+  "password": "pjcDizL1ndB",
+  "firstname": "Helen",
+  "lastname": "Reid",
+  "email": "hreid7@ask.com",
+  "phone": "3211155267",
+  "location": "54512 Corry Alley",
+  "avatar_url": "https://robohash.org/autarchitectoex.bmp?size=50x50&set=set1"
+}, {
+  "username": "kknight8",
+  "password": "T2W1PpLo",
+  "firstname": "Kelly",
+  "lastname": "Knight",
+  "email": "kknight8@google.com.hk",
+  "phone": "4261341903",
+  "location": "502 Schurz Point",
+  "avatar_url": "https://robohash.org/cupiditateetvoluptatum.png?size=50x50&set=set1"
+}, {
+  "username": "mcooper9",
+  "password": "L1kHgLi1",
+  "firstname": "Michael",
+  "lastname": "Cooper",
+  "email": "mcooper9@ustream.tv",
+  "phone": "6649230638",
+  "location": "899 High Crossing Avenue",
+  "avatar_url": "https://robohash.org/repellatsintvoluptas.png?size=50x50&set=set1"
+}]
