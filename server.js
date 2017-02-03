@@ -53,7 +53,7 @@ app.use(express.static('public'));
 
 
 app.listen(process.env.Port || 3000, function () {
-	console.log('Listening on port 3000!')
+	console.log('Listening on port'+process.env.Port+'!');
 });
 
 app.get('/', function(req,res){
@@ -248,14 +248,13 @@ app.post('/profile/update',function(req,res){
 					}else{
 						storedata(user);
 					}
+				}else{
+					res.data(400).send('Invalid identity!');
 				}
-	// 			}else{
-	// 				res.data(400).send('Invalid identity!');
-	// 			}
 			});
 		}); 
-	// } else {
-	// 	res.status(400).send('Invalid update! Please enter password to verify your identity!');
+	} else {
+		res.status(400).send('Invalid update! Please enter password to verify your identity!');
 	}
 });
 
