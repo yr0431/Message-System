@@ -1,5 +1,6 @@
 var app = angular.module('msgApp',['ngCookies', 'ngRoute']);
 
+
 app.config(function($routeProvider, $locationProvider){
 	$routeProvider
 	.when('/', {
@@ -57,6 +58,7 @@ app.run(function($rootScope, $cookies, $http, $window) {
 });
 
 app.controller('msgCtrl', function ($scope, $http, $cookies, $rootScope, $window) {
+
 	$rootScope.user_tag = 'From';
 	$rootScope.isRecipient = true;
 	if($rootScope.currentUser){

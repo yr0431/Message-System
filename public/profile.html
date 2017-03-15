@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>Profile</title>
-  <link rel="icon" href="/favicon.ico" />
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="style/profile.css">
@@ -13,25 +12,7 @@
 	<script type="text/javascript" src="https://code.angularjs.org/1.5.5/angular-cookies.js" ></script>
 </head>
 <body ng-app="profileApp" ng-controller = 'profileCtrl'>
-<header>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="login.html">MessageSystem</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="login.html">Home</a></li>
-      <li><a href="profile.html#/">Profile</a></li>
-      <li><a href="message.html#/">Message</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li ng-show="currentUser" class="hide-elem"><a href="#"><span class=""></span>Hi {{ currentUser }}! </a></li>
-      <li ng-show="currentUser" class="hide-elem"><a href="profile.html#/"><span class="glyphicon glyphicon-envelope"></span> My Account</a></li>
-      <li ng-show="currentUser" class="hide-elem"><a href="" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-      <li ng-hide="currentUser"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
+<header ng-include src="'nav.html'">
 </header>
 <div class="container">
   <div class="panel panel-default">

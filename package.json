@@ -9,9 +9,14 @@
     "express": "^4.14.0",
     "jwt-simple": "^0.5.1",
     "mongoose": "^4.7.8",
-    "morgan": "^1.7.0"
+    "morgan": "^1.7.0",
+    "socket.io": "^1.7.2"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yr0431/Message-System"
+  },
   "author": "Rui Yang",
   "license": "ISC"
 }

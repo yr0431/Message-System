@@ -6,11 +6,22 @@ var jwt = require('jwt-simple');
 var morgan = require('morgan');
 
 var app = express();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
 
 var JWT_SECRET = 'ruiyang'
 
 mongoose.connect('mongodb://admin:admin@ds139989.mlab.com:39989/message_system');
 var db = mongoose.connection;
+
+io.on('connection', function (socket) {
+    console.log('new client connected');
+    socket.on('chat message', function(msg){
+	    console.log('message: ' + msg);
+	    io.emit('chat message',msg);
+	  });
+});
 
 db.on('open', function(){
 	console.log('Connection established');
@@ -52,7 +63,7 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 
-app.listen(process.env.PORT || 3000, function () {
+http.listen(process.env.PORT || 3000, function () {
 	console.log('Listening on port!');
 });
 

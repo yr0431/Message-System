@@ -1,0 +1,60 @@
+html, body{
+	height: 93%;
+}
+.full-height{
+	height: 100%;
+}
+
+body{
+	background: url('../images/login-background.jpg') no-repeat fixed center;
+	font: 13px Helvetica, Arial; 
+}
+
+.container{
+	margin: 0 auto;
+	background-color: rgba(255,255,255,0.5);
+	border: 1px solid #BBB;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.panel{
+	height: 100%;
+	width: 80%;
+	margin: auto;
+}
+
+.panel-heading{
+	text-align: center;
+}
+.panel-body{
+	height: calc(100% - 80px);
+	position: relative;
+	padding-bottom: 45px;
+}
+
+/** { margin: 0; 
+	padding: 0; 
+box-sizing: border-box; 
+}*/
+form { 
+	bottom: 0px; 
+	position: absolute;
+	width: 97%;
+}
+.message-div {
+	height: 100%;
+	overflow: auto;
+}
+
+#messages { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+}
+#messages li { 
+	padding: 5px 10px; 
+}
+#messages li:nth-child(odd) { 
+	background: #eee; 
+}

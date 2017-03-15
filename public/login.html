@@ -13,25 +13,7 @@
 	<base href="/">
 </head>
 <body ng-app="loginApp" ng-controller="loginCtrl">
-<header>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">MessageSystem</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="/">Home</a></li>
-      <li><a href="/profile.html">Profile</a></li>
-      <li><a href="/message.html#/">Message</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li ng-show="currentUser" class="hide-elem"><a href="#"><span class=""></span>Hi {{ currentUser }}! </a></li>
-      <li ng-show="currentUser" class="hide-elem"><a href="/profile.html"><span class="glyphicon glyphicon-envelope"></span> My Account</a></li>
-      <li ng-show="currentUser" class="hide-elem"><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-      <li ng-hide="currentUser"><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
+<header ng-include src="'nav.html'">
 </header>
 	<div class="row">
 		<div class="container">
