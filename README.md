@@ -29,10 +29,10 @@
   
 ## issues for now
 * Login & Sign up page
-  * validation issues(data scheme used at server side, bad data won't infect the database)
-    * "remenber me" not available yet
-    * username depulication validation not available yet
-    * phone number validation not abailable yet
+  * validation issues(data schema used at server side, bad data won't infect the database)
+      * "remember me" not available yet
+      * username duplication validation not available yet
+      * phone number validation not available yet
 * Profile Page
   * update
     * force the user to log in again after updating information, need to improve
